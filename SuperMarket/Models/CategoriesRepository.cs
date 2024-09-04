@@ -37,11 +37,11 @@
         {
             if (id != category.CategoryId) return;
 
-            var categoryUpdate = GetCategoryById(id);
-            if(categoryUpdate != null)
+            var categoryUpdate = _categories.FirstOrDefault(x => x.CategoryId == id);
+            if (categoryUpdate != null)
             {
-                category.Name = categoryUpdate.Name;
-                category.Description = categoryUpdate.Description;  
+                categoryUpdate.Name = category.Name;
+                categoryUpdate.Description = category.Description;  
             }
         }
 
