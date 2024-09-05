@@ -14,7 +14,11 @@
            <label asp-for="Name"class="col-form-label"></label>
        </div>
        <div class="col-6">
+           <div class="text-danger" asp-validation-summary="All"></div>
            <input type="text" asp-for="Name" class="form-control" />
+       </div>
+       <div class="col">
+           <span class="text-danger" asp-validation-for="Name"></span>
        </div>
     </div>
     <div class="row mb-3">
