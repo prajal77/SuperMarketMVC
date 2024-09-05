@@ -13,6 +13,7 @@ namespace SuperMarket.Controllers
 
         public IActionResult Edit(int? id)
         {
+            ViewBag.Action = "edit";
             var category = CategoriesRepository.GetCategoryById(id.HasValue ? id.Value : 0);
             return View(category);
         }
@@ -30,8 +31,8 @@ namespace SuperMarket.Controllers
         }
         public IActionResult Add()
         {
-
-        return View(); 
+            ViewBag.Action = "add";
+            return View(); 
         }
 
         [HttpPost]
