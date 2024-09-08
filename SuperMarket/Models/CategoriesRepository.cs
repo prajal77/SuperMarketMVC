@@ -1,4 +1,4 @@
-﻿namespace SuperMarket.Models
+﻿/*namespace SuperMarket.Models
 {
     public static class CategoriesRepository
     {
@@ -56,3 +56,4 @@
 
     }
 }
+*/
